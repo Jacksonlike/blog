@@ -3,12 +3,12 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
-subtitle:
-description:
-keywords:
-author: John Doe
-language:
+title: Coding Runner
+subtitle: 
+description: 世界上只有一种英雄主义，就是在认清了你的真相后依然爱着你。
+keywords: 
+author: 杰克疯
+language: zh-Hans
 timezone:
 
 # URL
@@ -73,7 +73,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+theme: next
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
@@ -81,3 +81,6 @@ deploy:
   type: git
   repo: git@github.com:Jacksonlike/Jacksonlike.io.git
   branch: master
+
+local_search:
+  enable: true
