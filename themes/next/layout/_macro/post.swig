@@ -347,7 +347,7 @@
 
         <li class="post-copyright-license">
           <strong>版权声明： </strong>
-          本文由 {{theme.author}} 原创，采用 <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh" rel="license" target="_blank">保留署名-非商业性使用-禁止演绎 4.0-国际许可协议</a> </br>转载请保留以上声明信息！
+          本文由 {{theme.author}} 原创，采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="license" target="_blank">CC BY-NC-SA 4.0，</a> 转载请保留以上声明信息！
         </li>
       </ul>
     {% endif %}
