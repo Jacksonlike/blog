@@ -341,18 +341,9 @@
         </li>
 
         <li class="post-copyright-link">
-          <strong>本文标题：</strong>
-          <a href="{{ url_for(post.permalink) }}" title="{{ post.title }}">{{ post.title }}</a>
-        </li>
-
-        <li class="post-copyright-link">
           <strong>本文链接：</strong>
           <a href="{{ url_for(post.permalink) }}" title="{{ post.title }}">{{ post.permalink }}</a>
         </li>
-
-        <li class="post-copyright-date">
-            <strong>发布时间：</strong>{{ post.date.format("YYYY年M月D日 - HH时MM分") }}
-        </li>  
 
         <li class="post-copyright-license">
           <strong>版权声明： </strong>
