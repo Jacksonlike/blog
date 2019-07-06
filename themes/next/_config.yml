@@ -88,7 +88,7 @@ font:
   enable: true
 
   # Uri of fonts host. E.g. //fonts.googleapis.com (Default)
-  host: 
+  host: https://fonts.css.network
 
   # Global font settings used on <body> element.
   global:
