@@ -5,4 +5,5 @@ categories:
 - 生活
 ---
 
+![](/images/background/baby.jpg)
 ##### Hello，这里是我的首篇博客~~~
