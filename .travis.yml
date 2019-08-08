@@ -27,7 +27,6 @@ script:
   - rm -rf public
   - hexo clean
   - hexo generate
-  - mv ./public/google* ./public/archives/
   - npx gulp
 
 # 设置git提交名，邮箱；替换真实token到_config.yml文件，最后depoy部署
