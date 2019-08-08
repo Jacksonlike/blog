@@ -86,3 +86,7 @@ deploy:
 
 local_search:
   enable: true
+
+# 自动生成sitemap
+sitemap:
+  path: sitemap.xml
