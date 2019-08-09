@@ -6,7 +6,7 @@
 title: Coding Runner
 subtitle: 
 description: 世界上只有一种英雄主义，就是在认清了你的真相后依然爱着你。
-keywords: 
+keywords: iOS,web,前端,程序员 
 author: 杰克疯
 language: zh-Hans
 timezone:
@@ -15,8 +15,9 @@ timezone:
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: https://jacksonlike.cn
 root: /
-permalink: :year/:month/:day/:title/
+permalink: :category/:title/
 permalink_defaults:
+  lang: en
 
 # Directory
 source_dir: source
