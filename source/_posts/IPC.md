@@ -27,7 +27,9 @@ categories:
     - [信号量 SEM](#sem) 
     - [套接字 Socket](#socket)
 
-<span id="pipe"/> 
+<span id="pipe"/>  
+
+
 ### 无名管道 PIPE
 
 管道，命名就很形象，可以想象成一根水管连接两个进程，一边进水一边出水。
