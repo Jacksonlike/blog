@@ -50,7 +50,7 @@ int pipe(int fd[2]);  // 创建成功返回 0，否则为 -1
 
 ![](/images/ipc/1.png)
 
-首先进程调用 `pipe` 函数，接着调用 `fork` 函数创建子进程，所以产生的子进程和父进程一样都能获取 PIPE 读端和写端。紧接着各自关闭所不需要的文件 ID，上图表示的是父进程传输信息到子进程，所以父进程关闭了读端，子进程关闭了写端。因为管道的半双工的特点，所以一般不会用一个管道进行双向的信息互换，更常见的是创建两个管道进行信息互换（如协同进程） 。
+首先进程调用 `pipe` 函数，接着调用 `fork` 函数创建子进程，所以产生的子进程和父进程一样都能获取 PIPE 读端和写端。紧接着各自关闭所不需要的文件 ID，上图表示的是父进程传输信息到子进程，所以父进程关闭了读端，子进程关闭了写端。因为管道的半双工的特点，所以一般不会用一个管道进行双向的信息互换，更常见的是创建两个管道进行信息互换（如协同进程）。
 
 简单的 demo
 
@@ -109,8 +109,7 @@ int main(int argc, char const *argv[])
 
 下图说明了如何通过管道连接 `find`、`grep` 和 `wc` 命令，将 `find` 命令的标准输出重定向（通过 `dup2` 接口 ）到管道的写端，而将 `grep` 命令的标准输入指向管道的读端。`grep` 和 `wc` 之间也是同理。
 
-![](/images/ipc/3.png)
-
+![](/images/ipc/3.png)  
 
 
 <span id="fifo"/> 
@@ -123,7 +122,58 @@ int main(int argc, char const *argv[])
 - 具有写入原子性，多写者同时进行操作不会出现数据混乱
 - First In First Out 原则，最先写入就会最先被读出
 
-#### 读写规则
+#### 使用
+
+```c
+# read.c
+#define FIFO "/tmp/fifotest"
+int main(int argc, char const *argv[])
+{
+	if (access(FIFO, F_OK)) {
+		mkfifo(FIFO, 0644);
+	}
+
+	int fifo = open(FIFO, O_RDONLY); // 只读的方式打开FIFO
+	
+	char msg[20];
+	memset(msg, 0, 20);
+
+	read(fifo, msg, 20);
+	printf("read from FIFO: %s\n", msg);
+	
+	return 0;
+}
+
+# write.c
+#define FIFO "/tmp/fifotest"
+int main(int argc, char const *argv[])
+{
+	if (access(FIFO, F_OK)) {
+		mkfifo(FIFO, 0644);
+	}
+
+	int fifo = open(FIFO, O_WRONLY); // 只写的方式打开FIFO
+	
+	char msg[20];
+	memset(msg, 0, 20);
+
+	fgets(msg, 20, stdin);
+	int n = write(fifo, msg, strlen(msg));
+	printf("sebded %d bytes to FIFO\n", n);
+	
+	return 0;
+}
+```
+
+这是完整源码[地址](https://github.com/Jacksonlike/blog_code/tree/master/IPC)。代码执行效果如下。
+![](/images/ipc/5.png) 
+
+示例代码非常的简单，不过有以下几点进行说明：  
+- read 和 write 是两个同时独立运行的进程。
+- 刚开始运行 read 进程而还没运行 write 进程时，或者是运行了 write 进程且 read 进程还没有运行时，`open` 函数会被阻塞，因为管道文件（包括 `FIFO`、`PIPE` 和 `socket` ）不可以只有读端或者只有写端被打开。
+- 除了打开管道的时候可能发生阻塞，在进行读写操作的时候也可能会发生阻塞，具体规则如下表所示。
+
+  ![](/images/ipc/4.png) 
 
 
 
@@ -131,54 +181,4 @@ int main(int argc, char const *argv[])
 
 [对话 UNIX 探索管道](https://www.ibm.com/developerworks/cn/aix/library/au-spunix_pipeviewer/index.html)
 [Unix 环境高级编程](https://book.douban.com/subject/1788421) 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
