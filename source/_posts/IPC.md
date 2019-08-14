@@ -119,7 +119,7 @@ int main(int argc, char const *argv[])
 
 ### 有名管道 FIFO
 
-因为 `PIPE` 应用场景比较单一，性能较弱，限制条件太多。所以还有一种更强大的管道 `FIFO` 。
+ `PIPE` 最大的劣势就是只能使用在有共同祖先的进程间，应用场景单一，性能较弱，限制条件又太多。所以我们还需要一种更强大的管道 `FIFO` 。
 
 #### 特征
 - 有名字，存在于普通的文件系统中，所以任何有权限的进程都可以通过文件 IO 函数读写 `FIFO`
@@ -174,15 +174,21 @@ int main(int argc, char const *argv[])
 
 示例代码非常的简单，不过有以下几点进行说明：  
 - read 和 write 是两个同时独立运行的进程。
+
 - 刚开始运行 read 进程而还没运行 write 进程时，或者是运行了 write 进程且 read 进程还没有运行时，`open` 函数会被阻塞，因为管道文件（包括 `FIFO`、`PIPE` 和 `socket` ）不可以只有读端或者只有写端被打开。
+
 - 除了打开管道的时候可能发生阻塞，在进行读写操作的时候也可能会发生阻塞，具体规则如下表所示。
 
   ![](/images/ipc/4.png) 
-
+  
+- 当调用 `open` （或者调用 `fcntl` ）时，指定 `O_NONBLOCK` 的标志，则管道不会阻塞。具体规则与上述有所区别，如果需要可以查看 [UNIX网络编程卷2 第四章]([https://github.com/lancetw/ebook-1/blob/master/01_programming/UNIX%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B%E5%8D%B72%EF%BC%9A%E8%BF%9B%E7%A8%8B%E9%97%B4%E9%80%9A%E4%BF%A1%EF%BC%88%E7%AC%AC2%E7%89%88%EF%BC%89.pdf](https://github.com/lancetw/ebook-1/blob/master/01_programming/UNIX网络编程卷2：进程间通信（第2版）.pdf)) ，书中有详细描述。
 
 
 ### 参考文档
 
 [对话 UNIX 探索管道](https://www.ibm.com/developerworks/cn/aix/library/au-spunix_pipeviewer/index.html)
 [Unix 环境高级编程](https://book.douban.com/subject/1788421) 
+[UNIX网络编程 卷2](https:s//book.douban.com/subject/4118577/)
+
+
 
