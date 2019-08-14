@@ -109,10 +109,14 @@ int main(int argc, char const *argv[])
 
 下图说明了如何通过管道连接 `find`、`grep` 和 `wc` 命令，将 `find` 命令的标准输出重定向（通过 `dup2` 接口 ）到管道的写端，而将 `grep` 命令的标准输入指向管道的读端。`grep` 和 `wc` 之间也是同理。
 
-![](/images/ipc/3.png)  
+![](/images/ipc/3.png)    
+
+
+
 
 
 <span id="fifo"/> 
+
 ### 有名管道 FIFO
 
 因为 `PIPE` 应用场景比较单一，性能较弱，限制条件太多。所以还有一种更强大的管道 `FIFO` 。
