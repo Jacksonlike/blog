@@ -1,5 +1,5 @@
 ---
-title: 浅谈 IPC 的几种方式 (一)
+title: 浅谈 IPC 的几种方式（一）
 date: 2019-07-21 15:24:20
 tags: 
 - IPC
@@ -8,6 +8,7 @@ tags:
 - C 语言
 categories:
 - Unix
+description: 讨论 Unix 下的 IPC （进程间通信机制）--- 管道 PIPE
 ---
 
 ![](/images/background/barley.jpg)
