@@ -1,7 +1,6 @@
 ---
 title: 关于我的博客
 date: 2019-07-05 22:34:59
-disallow：true
 type: about
 ---
 

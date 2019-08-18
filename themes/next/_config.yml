@@ -40,7 +40,7 @@ menu:
   categories: /categories
   archives: /archives
   tags: /tags
-  todo: /todo
+  # todo: /todo
   # about: /about
   #sitemap: /sitemap.xml
   #commonweal: /404.html
