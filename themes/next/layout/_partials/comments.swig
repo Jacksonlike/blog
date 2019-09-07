@@ -22,8 +22,6 @@
       <div id="hypercomments_widget"></div>
     {% elseif theme.gentie_productKey %}
       <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
-    {% elseif theme.youyan_uid %}
-      <div id="uyan_frame"></div>
 	{% elseif theme.livere_uid %}
       <div id="lv-container" data-id="city" data-uid="{{ theme.livere_uid }}"></div>
     {% endif %}
