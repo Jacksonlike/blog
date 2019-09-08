@@ -91,3 +91,6 @@ local_search:
 # 自动生成sitemap
 sitemap:
   path: sitemap.xml
+
+lazyload:
+  enable: true
