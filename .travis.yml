@@ -16,7 +16,6 @@ branches:
     - src 
 
 before_install:
-  - sudo apt-get install graphicsmagick
   - npm install -g hexo-cli
 
 # Start: Build Lifecycle
@@ -25,7 +24,6 @@ install:
 
 # 执行清缓存，生成网页操作
 script:
-  - sed -i 's/hexo.source_dir, originPath/hexo.theme_dir, "source", originPath/' node_modules/hexo-lazyload/index.js
   - rm -rf public
   - hexo clean
   - hexo generate

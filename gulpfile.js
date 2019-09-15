@@ -44,5 +44,5 @@ gulp.task('minify-images', function() {
 });
 // 默认任务
 gulp.task('default', gulp.parallel(
-    'minify-html','minify-css','minify-js','minify-images'
+    'minify-html', 'minify-css', 'minify-js', 'minify-images'
 ));
