@@ -1,6 +1,6 @@
 ---
 title: Python 协程
-date: 2019-08-22 20:43:33
+date: 2019-09-15 20:43:33
 tags:
 - Python
 - coroutine
@@ -153,9 +153,9 @@ def do_works_coroutine(tasks):
 
 ### 总结
 #### 协程到底是什么
-以上说了这么多之后，应该了解了什么是协程，协程的工作机理，但是如果要一句话描述出来，还真不太好说。所以在 `stackoverflow` 看到一句话[描述](https://stackoverflow.com/questions/553704/what-is-a-coroutine?tdsourcetag=s_pcqq_aiomsg)，感觉挺合适的，就迁移过来了。
+以上说了这么多之后，应该了解了什么是协程，协程的工作机理，但是如果要一句话描述出来，还真不太好说。所以在 `Stack Overflow` 看到一句话[描述](https://stackoverflow.com/questions/553704/what-is-a-coroutine?tdsourcetag=s_pcqq_aiomsg)，感觉挺合适的，就迁移过来了。
 
-**协程是一种通用控制结构，其中流控制在两个不同的例程之间协同传递而不返回。**
+**协程是一种通用控制结构，其中流的控制权在不同任务之间协同传递而不返回。**
 
 #### 并发编程中，协程的优劣
 
@@ -167,3 +167,12 @@ def do_works_coroutine(tasks):
 
 总的来说，协程和线程更适合处理 I/O 密集的场景，特别是 Python 中的多线程实际上也只是单线程中执行；而对于 CPU 密集的场景来说，多进程、多机器、多处理器才能提高程序的运行速度。
 
+### 代码地址
+
+ [https://github.com/Jacksonlike/blog_code/tree/master/coroutine](https://github.com/Jacksonlike/blog_code/tree/master/coroutine)
+
+### 参考文档
+
+[Stack Overflow](https://stackoverflow.com/questions/553704/what-is-a-coroutine?tdsourcetag=s_pcqq_aiomsg) 
+[asyncio 官方文档](https://docs.python.org/3/library/asyncio.html) 
+[Coroutine in Python](https://www.geeksforgeeks.org/coroutine-in-python/?tdsourcetag=s_pcqq_aiomsg) 
