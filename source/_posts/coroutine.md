@@ -1,5 +1,5 @@
 ---
-title: Python 协程
+title: Python 从并发编程谈协程
 date: 2019-09-15 20:43:33
 tags:
 - Python
@@ -176,3 +176,4 @@ def do_works_coroutine(tasks):
 [Stack Overflow](https://stackoverflow.com/questions/553704/what-is-a-coroutine?tdsourcetag=s_pcqq_aiomsg) 
 [asyncio 官方文档](https://docs.python.org/3/library/asyncio.html) 
 [Coroutine in Python](https://www.geeksforgeeks.org/coroutine-in-python/?tdsourcetag=s_pcqq_aiomsg) 
+[python-parallel-programmning-cookbook](https://python-parallel-programmning-cookbook.readthedocs.io/zh_CN/latest/chapter4/index.html)
