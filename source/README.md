@@ -1,4 +1,4 @@
-### [个人博客]
+### 个人博客
 [![Build Status](https://travis-ci.org/Jacksonlike/jacksonlike.github.io.svg?branch=src)](https://travis-ci.org/Jacksonlike/jacksonlike.github.io)  
   
   
