@@ -138,6 +138,7 @@ font:
   #LinkLabel: Link
 social:
   GitHub: https://github.com/Jacksonlike
+  Note: https://jacksonlike.cn/note
   # weibo: http://weibo.com/ouyanglip
   # zhihu: http://www.zhihu.com/people/lippi-ouyang
   #Others:
@@ -151,10 +152,11 @@ social_icons:
   enable: true
   # Icon Mappings.
   # KeyMapsToSocalItemKey: NameOfTheIconFromFontAwesome
-  GitHub: github
-  Twitter: twitter
-  weibo: weibo
-  zhihu: battery-3 
+  GitHub: github-alt
+  Note: leanpub
+  # Twitter: twitter
+  # weibo: weibo
+  # zhihu: battery-3 
 
 
 # Sidebar Avatar
