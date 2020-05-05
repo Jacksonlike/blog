@@ -6,7 +6,6 @@ tags:
 - XSS
 - CSRF
 - SQL 注入
-- DDoS
 categories:
 - Web
 description: 常见 Web 安全攻防总结，安全问题永远是大问题
@@ -218,7 +217,7 @@ DOM 型的 XSS 攻击原理同反射型的类似，只需要把【Web 应用程�
 
 第四点是对于关键的 `Cookie` 增加 `HTTPOnly` 的限制，这样就算攻击者成功注入恶意脚本，也无法窃取此 `Cookie`。
 
-可以看到 `github.com` 就使用了上述的这些策略。
+可以看到 `github.com` 就使用了上述的这些策略。 
 
 ![](/images/web-security/4.png)
 
@@ -231,11 +230,59 @@ CSRF（Cross-site request forgery）跨站请求伪造：攻击者诱导受害�
 
 #### GET 类型的 CSRF
 
+假设某站点 A 发帖的操作，是通过已登录用户点击对应帖子的发送按钮，向服务端发送如下 GET 请求来实现的：
 
+```
+http://api.example.qx/post/delete?post_id=1003&content=hello
+```
 
+而在另一个危险的站点 B，存在这样一段 `HTML` 代码：
 
+```html
+<img src=http://api.example.qx/post/delete?post_id=1003&content=csrf>
+```
+
+那么当 A 站点的已登录用户 C 访问站点 B 时，浏览器会自动请求 `img` 标签的 `src` 地址，并且会携带 A 站点的 Cookie 信息进行请求，达到攻击者利用 C 的身份信息在 A 站点发帖的目的，甚至 C 都不知道自己被 B 所利用。
+
+#### POST 类型的 CSRF
+
+继续说到上面发帖的例子，A 站点发现漏洞进行了改造，将发帖的接口由 `GET` 请求改成了 `POST` 请求。不过这样也是挡不住入侵者的攻击的，危险站点与时俱进，也改进了入侵代码：
+
+```html
+<form action="http://api.example.qx/post/delete" method=POST>
+    <input type="hidden" name="post_id" value="1003" />
+    <input type="hidden" name="content" value="csrf" />
+</form>
+<script> document.forms[0].submit(); </script> 
+```
+
+可以看出，只要用户访问危险站点B，表单就会自动提交。POST 类型的 CSRF 虽然比 GET 类型要严格些，但仍然不复杂，不能起到抵御 CSRF 的作用。
+
+#### CSRF 攻击的特点
+
+- 攻击一般发生在第三方网站，而不是被攻击的网站。所以被攻击的网站无法进行阻止。
+- 攻击者只是利用受害者的登录凭证，而非窃取数据。
+- CSRF 形式可以各种各样，比如图片 URL、超链接、CORS、Form 提交等。
+- CSRF 攻击一般发生在第三方网站，所以通常都是需要跨域的。
+
+#### CSRF 的防护策略
+
+根据 CSRF 攻击的特点，被攻击的网站是没法阻止攻击的发生的，只能提高自身防御力，实际上就是阻止攻击者进行跨域请求或者阻止攻击者利用用户的登录凭证就可以了。
+
+##### 阻止不明外域的访问
+
+- 同源检测（Origin Header 和 Referer Header）
+- Samesite Cookie
+
+##### 提交时要求附加本域才能获取的信息
+
+- CSRF Token
+- 双重Cookie验证
+
+##### 重要请求增加验证码环节，这样的接口不应该太多，比较影响用户体验
 
 ### 参考文档
 [常见 Web 安全攻防总结](https://zoumiaojiang.com/article/common-web-security/)
 [前端安全系列（一）：如何防止XSS攻击](https://tech.meituan.com/2018/09/27/fe-security.html)
 [前端安全系列（二）：如何防止CSRF攻击](https://tech.meituan.com/2018/10/11/fe-security-csrf.html)
+
