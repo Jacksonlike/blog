@@ -1,39 +1,25 @@
-# 指定语言环境
 language: node_js
-# 指定需要sudo权限
 sudo: required
-# 指定node_js版本
-node_js: 
-  - 10.15.3
-# 指定缓存模块，可选。缓存可加快编译速度。
+node_js:
+- 12.16.3
 cache:
-  directories:
-    # - node_modules
-
-# 指定博客源码分支，因人而异。hexo博客源码托管在独立repo则不用设置此项
+  directories: 
+    - node_modules
 branches:
   only:
-    - src 
-
+  - src
 before_install:
-  - npm install -g hexo-cli
-
-# Start: Build Lifecycle
+- openssl aes-256-cbc -K $encrypted_416b9de205a4_key -iv $encrypted_416b9de205a4_iv
+  -in id_rsa.enc -out ~\/.ssh/id_rsa -d
+- chmod 600 ~/.ssh/id_rsa
+- npm install -g hexo-cli
 install:
-  - npm install
-
-# 执行清缓存，生成网页操作
+- npm install
 script:
-  - rm -rf public
-  - hexo clean
-  - hexo generate
-  - npx gulp
-
-# 设置git提交名，邮箱；替换真实token到_config.yml文件，最后depoy部署
+- rm -rf public
+- hexo clean
+- hexo generate
+- npx gulp
 after_script:
-  - git config user.name "Jacksonlike"
-  - git config user.email "jacksonlike290@163.com"
-  # 替换同目录下的_config.yml文件中gh_token字符串为travis后台刚才配置的变量，注意此处sed命令用了双引号。单引号无效！
-  - sed -i "s/gh_token/${GH_TOKEN}/g" ./_config.yml
-  - hexo deploy
-# End: Build LifeCycle
+- sed -i "s/gh_token/${GH_TOKEN}/g" ./_config.yml
+- hexo deploy
