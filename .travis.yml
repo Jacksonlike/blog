@@ -23,3 +23,5 @@ script:
 after_script:
 - sed -i "s/gh_token/${GH_TOKEN}/g" ./_config.yml
 - hexo deploy
+addons:
+  ssh_known_hosts: 106.52.147.227
