@@ -30,7 +30,7 @@ after_script:
   - sed -i "s/gh_token/${GH_TOKEN}/g" ./_config.yml
   - hexo deploy
   # 编译后的代码打包上传到自己的服务器
-  - ssh StrictHostKeyChecking=no cier@106.52.147.227 "/bin/bash" "pwd; cd ~ && touch txt"
+  - ssh cier@106.52.147.227 StrictHostKeyChecking=no "/bin/bash" "pwd; cd ~ && touch txt"
   - version=$(git rev-parse --short HEAD)
   - mv public ${version}
   - tar -czf blog.tar.gz ${version}
