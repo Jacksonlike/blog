@@ -29,7 +29,7 @@ draft: false
 
 1. With [Fira Code](https://github.com/tonsky/FiraCode) font
 2. Support highlighting with [prism](https://github.com/PrismJS/prism)
-   2-1. Use inline highlighting
+   2-1. Use inlin阿斯达斯的啥大所阿斯达斯的阿斯达e highlighting
 
 ```js{3}
 import React from 'react'

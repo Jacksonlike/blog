@@ -8126,13 +8126,6 @@ levn@^0.3.0, levn@~0.3.0:
     prelude-ls "~1.1.2"
     type-check "~0.3.2"
 
-"lighthousebot@git+https://github.com/GoogleChromeLabs/lighthousebot.git":
-  version "0.2.0"
-  resolved "git+https://github.com/GoogleChromeLabs/lighthousebot.git#a4bfc0857741c1cd6bde9ded967971fd27254ed6"
-  dependencies:
-    minimist "^1.2.0"
-    node-fetch "^2.2.0"
-
 lines-and-columns@^1.1.6:
   version "1.1.6"
   resolved "https://registry.yarnpkg.com/lines-and-columns/-/lines-and-columns-1.1.6.tgz#1c00c743b433cd0a4e80758f7b64a57440d9ff00"
@@ -9085,7 +9078,7 @@ node-fetch@2.1.2:
   resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.1.2.tgz#ab884e8e7e57e38a944753cec706f788d1768bb5"
   integrity sha1-q4hOjn5X44qUR1POxwb3iNF2i7U=
 
-node-fetch@2.6.0, node-fetch@^2.2.0, node-fetch@^2.6.0:
+node-fetch@2.6.0, node-fetch@^2.6.0:
   version "2.6.0"
   resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.6.0.tgz#e633456386d4aa55863f676a7ab0daa8fdecb0fd"
   integrity sha512-8dG4H5ujfvFiqDmVu9fQ5bOHUC15JMjMY/Zumv26oOvvVJjM67KF8koCWIabKQ1GJIa9r2mMZscBq/TbdOcmNA==
@@ -13096,25 +13089,20 @@ typedarray@^0.0.6:
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
 
-typeface-catamaran@0.0.54:
-  version "0.0.54"
-  resolved "https://registry.yarnpkg.com/typeface-catamaran/-/typeface-catamaran-0.0.54.tgz#080f7e87df87a4106a40cbdad2520bbe8d02391c"
-  integrity sha512-7O1tA09N76y3D8H1ONhTX9h8Qn6dedm0RYVN8qGHiVp9DZSxPR5l1B/AvQlcnI/680lBFP4gt0P7EXCi2m12uw==
+typeface-lobster-two@^1.1.13:
+  version "1.1.13"
+  resolved "https://registry.yarnpkg.com/typeface-lobster-two/-/typeface-lobster-two-1.1.13.tgz#612eac5d80e179b08fd6254e0828c88c60ce1142"
+  integrity sha512-V48D1wiBcHR4v2YEa98mCvqpg5tyR+wL6Eq4LpQ2pe9icaGdyHysZFym9qspdTTBT+evJ2nFNDY8tTj2RMWFIw==
 
-typeface-merriweather@0.0.72:
-  version "0.0.72"
-  resolved "https://registry.yarnpkg.com/typeface-merriweather/-/typeface-merriweather-0.0.72.tgz#2b990f5293252052d51d170c82d3892319ff0555"
-  integrity sha512-gO0+fcZ1fTyKUsYY1ltYOOTI6FmBGeEdyIfeQg9NL8aInndk0feiJJVJsKHm/DiyYrnQEezraAQhz/KQoqMGtw==
+typeface-monda@^1.1.13:
+  version "1.1.13"
+  resolved "https://registry.yarnpkg.com/typeface-monda/-/typeface-monda-1.1.13.tgz#4b64a6f2b98465ce3e4c289d0949ef1c11223511"
+  integrity sha512-4mNTBt08zpcNQMGsFNLFWI1T6mGq1VkOXlXT2AFHnMoBf+KMcMyC/GGDAug42in9lvcLsq2CMbxuuVnOYskV6A==
 
-typeface-montserrat@0.0.54:
-  version "0.0.54"
-  resolved "https://registry.yarnpkg.com/typeface-montserrat/-/typeface-montserrat-0.0.54.tgz#3fc338db6428d73485b75aa7bd2af8c9a55b9ab3"
-  integrity sha512-Typhap0PWT299+Va0G/8ZtycHMXrH4gBWKfiW977KEBx5rXUUCa70gvqLx1fdA0WAo6bhSAQmo8uc+QFAmjPww==
-
-typeface-noto-sans-kr@0.0.63:
-  version "0.0.63"
-  resolved "https://registry.yarnpkg.com/typeface-noto-sans-kr/-/typeface-noto-sans-kr-0.0.63.tgz#d4396920dd4af659c2a78b66c57a7d6c1c517135"
-  integrity sha512-IH1WIjCxhOaTvWvq3+zezhnsOGlwZ9HFdIawVTdU5Dss1/GRp75VqsReKJqAMPD6EegOmzOSM38kIiqimcN8Dg==
+typeface-roboto-slab@^1.1.13:
+  version "1.1.13"
+  resolved "https://registry.yarnpkg.com/typeface-roboto-slab/-/typeface-roboto-slab-1.1.13.tgz#e2b76ea7f5114d8869f29ca39c1a5b8ded51aa77"
+  integrity sha512-2oDTI2Z8GC/ijzhEXPYFA2EmF2Rm446skjY3gK56EzfVEX3BBgil1H9/ifqx9/IfBNwlqVoVs9Ez/g6zOhvC1Q==
 
 typography-normalize@^0.16.19:
   version "0.16.19"

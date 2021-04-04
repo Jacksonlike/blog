@@ -3,9 +3,9 @@
   "private": true,
   "description": "Gatsby blog starter template",
   "version": "0.1.0",
-  "author": "Jbee[JaeYeopHan]<ljyhanll@gmail.com>",
+  "author": "Jacksonlike<jacksonlike290@gmail.com>",
   "bugs": {
-    "url": "https://github.com/JaeYeopHan/gatsby-starter-bee/issues"
+    "url": "https://github.com/Jacksonlike/blog/issues"
   },
   "dependencies": {
     "gatsby": "^2.2.8",
@@ -46,10 +46,9 @@
     "react-typography": "^0.16.13",
     "smooth-scroll": "^16.0.0",
     "smoothscroll-polyfill": "^0.4.4",
-    "typeface-catamaran": "0.0.54",
-    "typeface-merriweather": "0.0.72",
-    "typeface-montserrat": "0.0.54",
-    "typeface-noto-sans-kr": "0.0.63",
+    "typeface-lobster-two": "^1.1.13",
+    "typeface-monda": "^1.1.13",
+    "typeface-roboto-slab": "^1.1.13",
     "typography": "^0.16.17",
     "typography-theme-github": "^0.16.18"
   },
@@ -61,30 +60,22 @@
     "gatsby-post-gen": "^1.0.0",
     "gray-matter": "^4.0.2",
     "inquirer": "^6.2.2",
-    "lighthousebot": "git+https://github.com/GoogleChromeLabs/lighthousebot.git",
     "prettier": "^1.14.2",
     "recursive-readdir": "^2.2.2",
     "signale": "^1.3.0"
   },
-  "homepage": "https://github.com/JaeYeopHan/gatsby-starter-bee#readme",
+  "homepage": "https://github.com/Jacksonlike/blog",
   "keywords": [
     "gatsby"
   ],
   "license": "MIT",
   "main": "n/a",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/JaeYeopHan/gatsby-starter-bee.git"
-  },
   "scripts": {
     "post": "gatsby-post-gen",
-    "dev": "gatsby develop",
+    "start": "gatsby develop",
     "lint": "eslint --ext .js,.jsx --ignore-pattern public .",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js' 'src/**/*.md'",
-    "develop": "gatsby develop",
-    "start": "npm run develop",
     "build": "gatsby build",
-    "lh": "lighthousebot",
     "fix-semi": "eslint --quiet --ignore-pattern node_modules --ignore-pattern public --parser babel-eslint --no-eslintrc --rule '{\"semi\": [2, \"never\"], \"no-extra-semi\": [2]}' --fix gatsby-node.js"
   }
 }

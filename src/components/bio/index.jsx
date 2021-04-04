@@ -23,7 +23,7 @@ export const Bio = () => (
                 }}
               />
               <div className="author-name">
-                <span className="author-name-prefix">Written by</span>
+                <span className="author-name-prefix">个人博客</span>
                 <Link to={'/about'} className="author-name-content">
                   <span>@{author}</span>
                 </Link>
@@ -62,7 +62,7 @@ export const Bio = () => (
 
 const bioQuery = graphql`
   query BioQuery {
-    avatar: file(absolutePath: { regex: "/profile.png/" }) {
+    avatar: file(absolutePath: { regex: "/avatar.png/" }) {
       childImageSharp {
         fixed(width: 72, height: 72) {
           ...GatsbyImageSharpFixed
@@ -74,11 +74,7 @@ const bioQuery = graphql`
         author
         introduction
         social {
-          twitter
           github
-          medium
-          facebook
-          linkedin
         }
       }
     }

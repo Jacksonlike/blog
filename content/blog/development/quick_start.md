@@ -7,7 +7,7 @@ draft: false
 
 # Getting Started 😎
 
-## 1. Create a Gatsby site.
+## 奥术大师大所多啥大苏打阿萨德打.
 
 ```sh
 # create a new Gatsby site using the blog starter
@@ -31,7 +31,8 @@ $ npm start
 
 ## 3. Add your content
 
-You can write...
+好消息：ES2020 的新特性都已经完成了！这意味着我们现在对新的 JavaScript 规范 ES2020 的变化有了完整的了解。So，让我们看看都有哪些变化把。
+You can write...阿斯顿撒大所大所大设群翁付凡事都噶防守打法阿尔法啥地方放沙发
 
 - contents to blog in `content/blog` directory.
 - resume `content/__about` directory.

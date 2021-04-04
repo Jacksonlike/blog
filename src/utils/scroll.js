@@ -1,5 +1,5 @@
 import SmoothScroll from 'smooth-scroll/dist/smooth-scroll.min'
-import smoothscroll from 'smoothscroll-polyfill';
+import smoothscroll from 'smoothscroll-polyfill'
 
 let scroll
 
