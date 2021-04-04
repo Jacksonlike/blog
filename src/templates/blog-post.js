@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect } from 'react'
 import { graphql } from 'gatsby'
 
 import * as Elements from '../components/elements'

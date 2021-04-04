@@ -1,4 +1,4 @@
-import { Fragment, useMemo } from 'react';
+import { Fragment, useMemo } from 'react'
 
 import { Top } from '../components/top'
 import { Header } from '../components/header'
@@ -33,5 +33,5 @@ export const Layout = ({ location, title, children }) => {
         <Footer />
       </div>
     </Fragment>
-  );
+  )
 }

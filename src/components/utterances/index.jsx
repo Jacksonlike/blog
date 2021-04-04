@@ -1,4 +1,4 @@
-import { createRef, useEffect } from 'react';
+import { createRef, useEffect } from 'react'
 
 import * as Dom from '../../utils/dom'
 import { THEME } from '../../constants'

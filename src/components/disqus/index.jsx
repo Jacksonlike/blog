@@ -1,4 +1,4 @@
-import { Component } from 'react';
+import { Component } from 'react'
 import ReactDisqusComments from 'react-disqus-comments'
 
 export class Disqus extends Component {

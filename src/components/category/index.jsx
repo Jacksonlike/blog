@@ -1,4 +1,4 @@
-import { useCallback, useRef } from 'react';
+import { useCallback, useRef } from 'react'
 import { rhythm } from '../../utils/typography'
 import './index.scss'
 import { Item } from './item'
