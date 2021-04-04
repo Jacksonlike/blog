@@ -5,9 +5,9 @@ module.exports = {
   introduction: `依然在学习写代码... ...`,
   siteUrl: `https://jacksonlike.cn`,
   social: {
-    zhihu: `https://www.zhihu.com/people/jie-ke-feng-13`,
+    zhihu: `jacksonlike`,
     github: `Jacksonlike`,
-    weibo: `https://weibo.com/2829631084/profile?rightmod=1&wvr=6&mod=personinfo`,
+    weibo: `jacksonlike`,
   },
   icon: `content/assets/favicon.png`,
   keywords: [`blog`],
@@ -18,5 +18,6 @@ module.exports = {
   configs: {
     countOfInitialPost: 10,
   },
-  ga: '0',
+  ga: /* 'UA-176061706-1' */ '0',
+  baidu: 'b6e35907910d61915fbb881eec0582d4',
 };

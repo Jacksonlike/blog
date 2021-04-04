@@ -1,14 +1,15 @@
-import React from 'react'
-import { StaticQuery, graphql, Link } from 'gatsby'
-import Image from 'gatsby-image'
+import React from 'react';
+import { StaticQuery, graphql, Link } from 'gatsby';
+import Image from 'gatsby-image';
 
-import './index.scss'
+import './index.scss';
 
 export const Bio = () => (
   <StaticQuery
     query={bioQuery}
-    render={data => {
-      const { author, social, introduction } = data.site.siteMetadata
+    render={(data) => {
+      const { author, social, introduction } = data.site.siteMetadata;
+      console.log(social, '1111111111');
 
       return (
         <div className="bio">
@@ -32,33 +33,23 @@ export const Bio = () => (
                   {social.github && (
                     <a href={`https://github.com/${social.github}`}>GitHub</a>
                   )}
-                  {social.medium && (
-                    <a href={`https://medium.com/${social.medium}`}>Medium</a>
-                  )}
-                  {social.twitter && (
-                    <a href={`https://twitter.com/${social.twitter}`}>
-                      Twitter
+                  {social.zhihu && (
+                    <a href={`https://www.zhihu.com/people/${social.zhihu}`}>
+                      zhihu
                     </a>
                   )}
-                  {social.facebook && (
-                    <a href={`https://www.facebook.com/${social.facebook}`}>
-                      Facebook
-                    </a>
-                  )}
-                  {social.linkedin && (
-                    <a href={`https://www.linkedin.com/in/${social.linkedin}/`}>
-                      LinkedIn
-                    </a>
+                  {social.weibo && (
+                    <a href={`https://weibo.com/${social.weibo}`}>weibo</a>
                   )}
                 </p>
               </div>
             </div>
           </div>
         </div>
-      )
+      );
     }}
   />
-)
+);
 
 const bioQuery = graphql`
   query BioQuery {
@@ -75,10 +66,12 @@ const bioQuery = graphql`
         introduction
         social {
           github
+          zhihu
+          weibo
         }
       }
     }
   }
-`
+`;
 
-export default Bio
+export default Bio;

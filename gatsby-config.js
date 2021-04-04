@@ -1,4 +1,4 @@
-const metaConfig = require('./gatsby-meta-config')
+const metaConfig = require('./gatsby-meta-config');
 
 module.exports = {
   siteMetadata: metaConfig,
@@ -76,6 +76,13 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-baidu-tongji`,
+      options: {
+        siteid: metaConfig.baidu,
+        head: false,
+      },
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: metaConfig.title,
@@ -102,4 +109,4 @@ module.exports = {
     `gatsby-plugin-lodash`,
     `gatsby-plugin-sitemap`,
   ],
-}
+};
