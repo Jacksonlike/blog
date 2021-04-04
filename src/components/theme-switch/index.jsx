@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react';
 import Switch from 'react-switch'
 
 import * as Dom from '../../utils/dom'

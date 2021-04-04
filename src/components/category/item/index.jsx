@@ -1,4 +1,4 @@
-import React, { useRef, useCallback, useEffect } from 'react'
+import { useRef, useCallback, useEffect } from 'react';
 
 export const Item = ({ title, selectedCategory, onClick, scrollToCenter }) => {
   const tabRef = useRef(null)

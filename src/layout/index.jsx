@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react'
+import { Fragment, useMemo } from 'react';
 
 import { Top } from '../components/top'
 import { Header } from '../components/header'
@@ -13,7 +13,7 @@ export const Layout = ({ location, title, children }) => {
   const themeSwitch = useMemo(() => <ThemeSwitch />, [])
 
   return (
-    <React.Fragment>
+    <Fragment>
       <Top title={title} location={location} rootPath={rootPath} />
       <div
         style={{
@@ -32,6 +32,6 @@ export const Layout = ({ location, title, children }) => {
         {children}
         <Footer />
       </div>
-    </React.Fragment>
-  )
+    </Fragment>
+  );
 }

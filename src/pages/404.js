@@ -1,10 +1,10 @@
-import React from 'react'
+import { Component } from 'react';
 import { graphql } from 'gatsby'
 
 import { Layout } from '../layout'
 import { Head } from '../components/head'
 
-class NotFoundPage extends React.Component {
+class NotFoundPage extends Component {
   render() {
     const { data } = this.props
     const siteTitle = data.site.siteMetadata.title

@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react'
+import { useMemo } from 'react';
 
 import { ThumbnailContainer } from '../thumbnail-container'
 import { ThumbnailItem } from '../thumbnail-item'

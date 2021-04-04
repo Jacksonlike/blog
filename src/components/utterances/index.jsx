@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import { createRef, useEffect } from 'react';
 
 import * as Dom from '../../utils/dom'
 import { THEME } from '../../constants'
@@ -9,7 +9,7 @@ const DARK_THEME = 'photon-dark'
 const LIGHT_THEME = 'github-light'
 
 export const Utterances = ({ repo }) => {
-  const rootElm = React.createRef()
+  const rootElm = createRef()
 
   useEffect(() => {
     const isDarkTheme = Dom.hasClassOfBody(THEME.DARK)
