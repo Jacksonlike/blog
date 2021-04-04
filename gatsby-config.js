@@ -57,6 +57,7 @@ module.exports = {
           {
             resolve: `gatsby-remark-prismjs`,
             options: {
+              aliases: { sh: 'bash' },
               inlineCodeMarker: '%',
             },
           },
@@ -67,14 +68,14 @@ module.exports = {
         ],
       },
     },
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: metaConfig.ga,
-        head: true,
-        anonymize: true,
-      },
-    },
+    // {
+    //   resolve: `gatsby-plugin-google-analytics`,
+    //   options: {
+    //     trackingId: metaConfig.ga,
+    //     head: true,
+    //     anonymize: true,
+    //   },
+    // },
     {
       resolve: `gatsby-plugin-baidu-tongji`,
       options: {
@@ -102,7 +103,6 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    `gatsby-plugin-feed`,
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,

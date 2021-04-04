@@ -16,9 +16,15 @@ $ npx gatsby new my-blog-starter https://github.com/JaeYeopHan/gatsby-starter-be
 
 > If you are not using `npx`, following [Gatsby Getting Started](https://www.gatsbyjs.org/docs/quick-start)
 
-```sh
+```shell
 $ npm install -g gatsby-cli
 $ gatsby new my-blog-starter https://github.com/JaeYeopHan/gatsby-starter-bee
+```
+
+```js
+const a = 100
+const b = 200
+console.log(a + b)
 ```
 
 ## 2. Start developing.

@@ -20,7 +20,7 @@ function getDistance(currentPos) {
   return Dom.getDocumentHeight() - currentPos
 }
 
-export default ({ data, location }) => {
+const IndexPage = ({ data, location }) => {
   const { siteMetadata } = data.site
   const { countOfInitialPost } = siteMetadata.configs
   const posts = data.allMarkdownRemark.edges
@@ -62,6 +62,8 @@ export default ({ data, location }) => {
     </Layout>
   )
 }
+
+export default IndexPage
 
 export const pageQuery = graphql`
   query {

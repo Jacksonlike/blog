@@ -1,4 +1,5 @@
 import { useEffect } from 'react'
+
 import * as IOManager from '../utils/visible'
 
 export function useIntersectionObserver() {

@@ -1,11 +1,11 @@
 import {
-  setValueToSessionStorage,
-  getValueFromSessionStorage,
-} from './sessionStorage'
-import {
   setValueToLocalStorage,
   getValueFromLocalStorage,
 } from './localStorage'
+import {
+  setValueToSessionStorage,
+  getValueFromSessionStorage,
+} from './sessionStorage'
 
 const SESSION_STORAGE_KEY = '__felog_session_storage_key__'
 const LOCAL_STORAGE_KEY = '__felog_local_storage_key__'

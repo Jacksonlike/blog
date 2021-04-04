@@ -2,7 +2,6 @@
 require('typeface-monda');
 require('typeface-roboto-slab');
 require('typeface-lobster-two');
-
 // polyfill
 require('intersection-observer');
 

@@ -1,5 +1,6 @@
-import { useEffect, useState, useCallback } from 'react'
 import qs from 'query-string'
+import { useEffect, useState, useCallback } from 'react'
+
 import { CATEGORY_TYPE } from '../constants'
 import * as ScrollManager from '../utils/scroll'
 
@@ -12,7 +13,7 @@ export function useCategory() {
       ScrollManager.go(DEST_POS)
     }
   }
-  const selectCategory = useCallback(category => {
+  const selectCategory = useCallback((category) => {
     setCategory(category)
     adjustScroll()
     window.history.pushState(
