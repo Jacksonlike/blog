@@ -7,7 +7,7 @@ const About = ({ data }) => {
   const resumes = data.allMarkdownRemark.edges
 
   const resume = resumes
-    .filter(({ node }) => node.frontmatter.lang === Lang.ENGLISH)
+    .filter(({ node }) => node.frontmatter.lang === Lang.CHINESE)
     .map(({ node }) => node)[0]
 
   return (
