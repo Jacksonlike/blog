@@ -37,6 +37,7 @@
 
   .author-socials {
     margin-top: 4px;
+    @include a-shadow-box;
   }
 
   a {

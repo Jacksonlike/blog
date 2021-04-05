@@ -1,16 +1,16 @@
-import { Fragment, useMemo } from 'react'
+import { Fragment, useMemo } from 'react';
 
-import { Top } from '../components/top'
-import { Header } from '../components/header'
-import { ThemeSwitch } from '../components/theme-switch'
-import { Footer } from '../components/footer'
-import { rhythm } from '../utils/typography'
+import { Top } from '../components/top';
+import { Header } from '../components/header';
+import { ThemeSwitch } from '../components/theme-switch';
+import { Footer } from '../components/footer';
+import { rhythm } from '../utils/typography';
 
-import './index.scss'
+import './index.scss';
 
 export const Layout = ({ location, title, children }) => {
-  const rootPath = `${__PATH_PREFIX__}/`
-  const themeSwitch = useMemo(() => <ThemeSwitch />, [])
+  const rootPath = `${__PATH_PREFIX__}/`;
+  const themeSwitch = useMemo(() => <ThemeSwitch />, []);
 
   return (
     <Fragment>
@@ -19,7 +19,7 @@ export const Layout = ({ location, title, children }) => {
         style={{
           marginLeft: `auto`,
           marginRight: `auto`,
-          maxWidth: rhythm(24),
+          maxWidth: rhythm(32),
           padding: `${rhythm(1)} ${rhythm(3 / 4)}`,
         }}
       >
@@ -33,5 +33,5 @@ export const Layout = ({ location, title, children }) => {
         <Footer />
       </div>
     </Fragment>
-  )
-}
+  );
+};

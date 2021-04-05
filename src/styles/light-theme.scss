@@ -69,4 +69,9 @@ body.light {
       color: $navigator-text-color;
     }
   }
+
+  :not(pre) > code[class*='language-'] {
+    background: $light-inline-dimmed-color;
+    color: $light-inline-text-color;
+  }
 }

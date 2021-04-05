@@ -9,6 +9,9 @@ $light-background-color: #fff;
 $light-text-shadow: 0 0 0.1px rgba(0, 0, 0, 0.3);
 $light-hover-text-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
 
+// a
+$a-link-color: #ffa7c4;
+
 // index
 $dimmed-color: #eef5db;
 $light-link-color: #000080;
@@ -22,8 +25,8 @@ $navigator-background-color: #fceff7;
 $blockquote-text-color: #999;
 
 // code
-$inline-dimmed-color: #ece5f1;
-$inline-text-color: #4b2043;
+$light-inline-dimmed-color: #ece5f1;
+$light-inline-text-color: #4b2043;
 
 // category
 $light-category-border-color: #ecf0f2;
@@ -54,3 +57,17 @@ $dark-category-text-color: #d8d7d7;
 
 $dark-category-highlight-border-color: #666;
 $dark-category-highlight-text-color: #fff;
+
+$dark-inline-dimmed-color: rgba(115, 124, 153, 0.2);
+$dark-inline-text-color: #e6e6e6;
+
+@mixin a-shadow-box {
+  a:not(.anchor) {
+    box-shadow: 0 1px 0 0 currentColor;
+    text-decoration: none;
+  }
+  a:hover,
+  a:active {
+    box-shadow: none;
+  }
+}

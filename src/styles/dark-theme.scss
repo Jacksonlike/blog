@@ -82,4 +82,9 @@ body.dark {
   td {
     border-bottom: 1px solid #eee;
   }
+
+  :not(pre) > code[class*='language-'] {
+    background: $dark-inline-dimmed-color;
+    color: $dark-inline-text-color;
+  }
 }
