@@ -30,7 +30,7 @@ export default About
 
 export const pageQuery = graphql`
   query {
-    allMarkdownRemark(filter: { frontmatter: { category: { eq: null } } }) {
+    allMarkdownRemark(filter: { frontmatter: { categories: { eq: null } } }) {
       edges {
         node {
           id

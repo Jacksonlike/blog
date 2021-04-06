@@ -1,9 +1,9 @@
-import { Link } from 'gatsby';
+import { Link } from 'gatsby'
 
-import './index.scss';
+import './index.scss'
 
 export const PostNavigator = ({ pageContext }) => {
-  const { previous, next } = pageContext;
+  const { previous, next } = pageContext
 
   return (
     <ul className="navigator">
@@ -22,5 +22,5 @@ export const PostNavigator = ({ pageContext }) => {
         )}
       </li>
     </ul>
-  );
-};
+  )
+}

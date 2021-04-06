@@ -29,6 +29,9 @@ module.exports = {
       options: {
         plugins: [
           {
+            resolve: `gatsby-remark-embed-video`,
+          },
+          {
             resolve: `gatsby-remark-katex`,
             options: {
               strict: `ignore`,

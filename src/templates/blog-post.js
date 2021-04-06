@@ -1,32 +1,32 @@
-import { useEffect } from 'react';
-import { graphql } from 'gatsby';
+import { useEffect } from 'react'
+import { graphql } from 'gatsby'
 
-import * as Elements from '../components/elements';
-import { Layout } from '../layout';
-import { Head } from '../components/head';
-import { PostTitle } from '../components/post-title';
-import { PostDate } from '../components/post-date';
-import { PostContainer } from '../components/post-container';
-import { Bio } from '../components/bio';
-import { PostNavigator } from '../components/post-navigator';
-import { Disqus } from '../components/disqus';
-import { Utterances } from '../components/utterances';
-import * as ScrollManager from '../utils/scroll';
+import * as Elements from '../components/elements'
+import { Layout } from '../layout'
+import { Head } from '../components/head'
+import { PostTitle } from '../components/post-title'
+import { PostDate } from '../components/post-date'
+import { PostContainer } from '../components/post-container'
+import { Bio } from '../components/bio'
+import { PostNavigator } from '../components/post-navigator'
+import { Disqus } from '../components/disqus'
+import { Utterances } from '../components/utterances'
+import * as ScrollManager from '../utils/scroll'
 
-import '../styles/code.scss';
-import 'katex/dist/katex.min.css';
+import '../styles/code.scss'
+import 'katex/dist/katex.min.css'
 
 const BlogPost = ({ data, pageContext, location }) => {
   useEffect(() => {
-    ScrollManager.init();
-    return () => ScrollManager.destroy();
-  }, []);
+    ScrollManager.init()
+    return () => ScrollManager.destroy()
+  }, [])
 
-  const post = data.markdownRemark;
-  const metaData = data.site.siteMetadata;
-  const { title, comment, siteUrl } = metaData;
-  const { disqusShortName, utterances } = comment;
-  const { title: postTitle, date } = post.frontmatter;
+  const post = data.markdownRemark
+  const metaData = data.site.siteMetadata
+  const { title, comment, siteUrl } = metaData
+  const { disqusShortName, utterances } = comment
+  const { title: postTitle, date } = post.frontmatter
 
   return (
     <Layout location={location} title={title}>
@@ -47,10 +47,10 @@ const BlogPost = ({ data, pageContext, location }) => {
       )}
       {!!utterances && <Utterances repo={utterances} />}
     </Layout>
-  );
-};
+  )
+}
 
-export default BlogPost;
+export default BlogPost
 export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {
     site {
@@ -74,4 +74,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`;
+`

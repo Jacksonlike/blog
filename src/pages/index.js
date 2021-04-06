@@ -25,9 +25,10 @@ const IndexPage = ({ data, location }) => {
   const { countOfInitialPost } = siteMetadata.configs
   const posts = data.allMarkdownRemark.edges
   const categories = useMemo(
-    () => _.uniq(posts.map(({ node }) => node.frontmatter.category)),
+    () => _.uniq(posts.map(({ node }) => node.frontmatter.categories).flat()),
     []
   )
+
   const [count, countRef, increaseCount] = useRenderedCount()
   const [category, selectCategory] = useCategory()
 
@@ -77,7 +78,9 @@ export const pageQuery = graphql`
     }
     allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { category: { ne: null }, draft: { eq: false } } }
+      filter: {
+        frontmatter: { categories: { ne: null }, draft: { eq: false } }
+      }
     ) {
       edges {
         node {
@@ -88,7 +91,7 @@ export const pageQuery = graphql`
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
             title
-            category
+            categories
             draft
           }
         }
