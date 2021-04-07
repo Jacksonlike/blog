@@ -12,8 +12,7 @@ module.exports = {
   icon: `content/assets/favicon.png`,
   keywords: [`blog`],
   comment: {
-    disqusShortName: '',
-    utterances: '',
+    utterances: 'jacksonlike/blog',
   },
   configs: {
     countOfInitialPost: 10,
