@@ -1,8 +1,5 @@
 @import '../../styles/variables.scss';
 
 .post-container {
-  a {
-    color: $a-link-color;
-  }
   @include a-shadow-box;
 }

@@ -1,6 +1,70 @@
-.icon {
-  text-align: center;
-  color: #222;
-  font-size: 14px;
-  font-weight: 900;
+@import '../../styles/variables.scss';
+
+.switch {
+  position: relative;
+  width: 24px;
+  height: 24px;
+
+  svg {
+    width: 24px;
+    height: 24px;
+    fill: $theme-switch-color;
+    transition: fill 200ms ease-out;
+  }
+
+  svg:active {
+    fill: $theme-switch-active-color;
+  }
+
+  .hidden-icon,
+  .show-icon {
+    position: absolute;
+    color: $theme-switch-color;
+    user-select: none;
+    cursor: pointer;
+  }
+}
+
+.switch-stable {
+  .hidden-icon {
+    opacity: 0;
+  }
+
+  .show-icon {
+    opacity: 1;
+  }
+}
+
+.switch-toggle {
+  .show-icon {
+    opacity: 0;
+    top: -300px;
+    animation: 500ms ease 200ms 1 normal show forwards;
+  }
+
+  .hidden-icon {
+    animation: 500ms ease 0s 1 normal hidden forwards;
+  }
+}
+
+@keyframes show {
+  0% {
+    top: -300px;
+    opacity: 0;
+  }
+  100% {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes hidden {
+  0% {
+    top: 0;
+    opacity: 1;
+  }
+  100% {
+    top: 1000px;
+    opacity: 0;
+  }
 }

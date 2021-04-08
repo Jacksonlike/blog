@@ -77,7 +77,7 @@
     "serve": "gatsby serve",
     "post": "gatsby-post-gen",
     "lint": "eslint --ext .js,.jsx --ignore-pattern public .",
-    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js*' 'content/**/*.md'",
+    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"src/**/*.{js,jsx,scss,json}\" \"content/**/*.md\"",
     "build": "gatsby clean && gatsby build"
   }
 }

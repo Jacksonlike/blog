@@ -46,9 +46,10 @@ body.dark {
 
   .thumbnail {
     h3 {
-      color: $dark-light-font-color;
+      color: $dark-title-color;
     }
-    p {
+    p,
+    small {
       color: $dark-middle-font-color;
     }
     &:hover {
@@ -59,7 +60,7 @@ body.dark {
   .footer {
     color: $dark-middle-font-color;
     a {
-      color: $dark-lightest-font-color;
+      color: $dark-link-color;
     }
   }
 
@@ -74,9 +75,9 @@ body.dark {
   }
 
   .navigator {
+    @include a-shadow-box;
     a {
-      background-color: $navigator-background-color;
-      color: $navigator-text-color;
+      color: $dark-link-color;
     }
   }
   td {
@@ -86,5 +87,11 @@ body.dark {
   :not(pre) > code[class*='language-'] {
     background: $dark-inline-dimmed-color;
     color: $dark-inline-text-color;
+  }
+
+  .post-container {
+    a {
+      color: $dark-link-color;
+    }
   }
 }

@@ -1,4 +1,4 @@
-import { Fragment, useMemo } from 'react'
+import { Fragment } from 'react'
 
 import { Top } from '../components/top'
 import { Header } from '../components/header'
@@ -10,7 +10,6 @@ import './index.scss'
 
 export const Layout = ({ location, title, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
-  const themeSwitch = useMemo(() => <ThemeSwitch />, [])
 
   return (
     <Fragment>
@@ -27,7 +26,7 @@ export const Layout = ({ location, title, children }) => {
           <div>
             <Header title={title} location={location} rootPath={rootPath} />
           </div>
-          {themeSwitch}
+          <ThemeSwitch />
         </div>
         {children}
         <Footer />

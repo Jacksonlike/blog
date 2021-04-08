@@ -45,9 +45,10 @@ body.light {
 
   .thumbnail {
     h3 {
-      color: $dark-gray;
+      color: $light-title-color;
     }
-    p {
+    p,
+    small {
       color: $middle-gray;
     }
     &:hover {
@@ -56,22 +57,28 @@ body.light {
   }
 
   .footer {
-    color: $light-gray;
+    color: $dark-gray;
     a {
-      color: $dark-gray;
+      color: $light-link-color;
     }
   }
 
   // post
   .navigator {
+    @include a-shadow-box;
     a {
-      background-color: $navigator-background-color;
-      color: $navigator-text-color;
+      color: $light-link-color;
     }
   }
 
   :not(pre) > code[class*='language-'] {
     background: $light-inline-dimmed-color;
     color: $light-inline-text-color;
+  }
+
+  .post-container {
+    a {
+      color: $light-link-color;
+    }
   }
 }
